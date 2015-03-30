@@ -1,0 +1,23 @@
+add jsNode, browserNode: JavascriptNode
+add javaNode: JavaNode
+
+add sync: RemoteWSGroup
+set sync.host = "ws.kevoree.org"
+set sync.path = "crossPlatform"
+
+attach jsNode, browserNode, javaNode sync
+
+add jsNode.ticker: Ticker
+
+add javaNode.printer, browserNode.printer: ConsolePrinter
+
+add jsNode.broker: WSMsgBroker
+set jsNode.broker.port = '9050'
+
+add chan: WSChan
+set chan.host = '127.0.0.1'
+set chan.port = '9050'
+
+bind jsNode.ticker.tick chan
+bind javaNode.printer.input chan
+bind browserNode.printer.input chan
