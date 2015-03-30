@@ -23,4 +23,11 @@ Go to http://runjs.kevoree.org/#/kevscript:
  - Click **Start from KevScript** button
 
 
-All set :)
+### Manage my runtimes
+You can now retrieve your running model in the [Kevoree Web Editor](http://editor.kevoree.org/?host=ws.kevoree.org&port=80&path=crossPlatform)
+
+> If you want to push modifications to your nodes you must use **Model** > **Custom push**  
+> and specify:
+>  - host: **ws.kevoree.org**
+>  - port: **80**
+>  - path: **crossPlatform**
